@@ -1,5 +1,7 @@
 <?php
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    Route::get('/','LoginController@index')->name('admin.login');//输入admin重定向到登录页面
+//    Route::redirect('/','login');//输入admin重定向到登录页面
     Route::get('login', 'LoginController@index')->name('admin.login');
     Route::post('login', 'LoginController@login')->name('admin.login');
 
